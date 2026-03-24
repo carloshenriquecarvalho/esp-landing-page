@@ -22,14 +22,26 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <section className="relative min-h-[80vh] w-full flex flex-col items-center overflow-hidden">
-        <Image
-        src="/banner-hero.png"
-        alt="Fundo ESP"
-        fill
-        priority
-        className="absolute inset-0 z-0 object-cover object-center w-full h-full brightness-[0.4]">
+        <picture
+        className="absolute inset-0 z-0 w-full brightness-[0.4]">
 
-        </Image>
+          {/* Se a tela for maior que 1024px */}
+          <source media="(min-width: 1024px)" srcSet="/banner-hero-desktop.png" />
+
+          {/* Se a tela for maior que 768px */}
+          <source media="(min-width: 768px)" srcSet="/banner-hero-desktop.png" />
+
+          <Image
+            src="/banner-hero.png"
+            alt="Fundo ESP"
+            fill
+            priority
+            className="absolute inset-0 z-0 object-cover object-center w-full h-full brightness-[0.4]"
+            placeholder="empty">
+           </Image>
+          </picture>
+
+    
         <div className="relative inset-0 z-10 py-3">
           <Image
           src="/logo.png"
@@ -37,17 +49,16 @@ export default function Home() {
           priority
           width={80}
           height={60}
-          className=""
           >
 
           </Image>
         </div>
-        <div className="relative z-10 pt-68 ">
+        <div className="relative z-10 pt-65">
           <h1 className="text-4xl font-bold text-btn-gold leading-tight align-center text-center">
             {CONTENT.hero.title}
           </h1>
           <p className="mt-6 text-text-primary text-center">
-            {CONTENT.hero.desciption}
+            {CONTENT.hero.description}
           </p>
           <div className="mt-10 flex flex-col align-center">
             <Button
