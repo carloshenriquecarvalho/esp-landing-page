@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  --color-esp-white: #EAEAEA;
   --color-esp-blue: #051F40;
   --color-esp-darkblue: #041737;
   --color-esp-gold: #AE923E;
@@ -12,19 +13,18 @@
   --color-background: var(--color-esp-darkblue);
   --color-btn-gold: var(--color-esp-gold);
   --color-dark-gold: var(--color-esp-dark-gold);
+  --color-text-primary: var(--color-esp-white);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
