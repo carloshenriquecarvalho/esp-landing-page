@@ -1,15 +1,17 @@
 'use client';
-import Link from "next/link";
+
+import Image from "next/image";
 import { Button } from "../components/ui/Button";
 import { sendGTMEvent } from "@next/third-parties/google";
 import { CONTENT } from "../constants/content";
 
 export default function Home() {
+
   const handleConversion = () => {
     sendGTMEvent({
       event: 'button_click',
       value: 'cta_hero_analise',
-      button_id: 'hero_main_button',
+      button_id: CONTENT.gtm.id,
       category: 'conversao'
     })
     setTimeout(() => {
@@ -19,11 +21,30 @@ export default function Home() {
   
   return (
     <main className="min-h-screen">
-      <section className="flex flex-col items-center px-6 py-16">
-        <div>
-          <h1 className="text-4xl font-bold text-btn-gold leading-tight">
+      <section className="relative min-h-[80vh] w-full flex flex-col items-center overflow-hidden">
+        <Image
+        src="/banner-hero.png"
+        alt="Fundo ESP"
+        fill
+        priority
+        className="absolute inset-0 z-0 object-cover object-center w-full h-full brightness-[0.4]">
+
+        </Image>
+        <div className="relative z-10 pt-68 ">
+          <h1 className="text-4xl font-bold text-btn-gold leading-tight align-center text-center">
             {CONTENT.hero.title}
           </h1>
+          <p className="mt-6 text-text-primary text-center">
+            {CONTENT.hero.desciption}
+          </p>
+          <div className="mt-10 flex flex-col align-center">
+            <Button
+              onClick={handleConversion}
+              id={CONTENT.gtm.id}
+              text={CONTENT.hero.ctaText}
+            >
+            </Button>
+          </div>
         </div>
 
       </section>
