@@ -1,4 +1,5 @@
 'use client';
+import { Button } from "../components/ui/Button";
 import { useState } from "react";
 
 export default function Home() {
@@ -7,9 +8,10 @@ export default function Home() {
     setGreeding("positivo");
   }
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <p>Status: <strong>{greeding}</strong></p>
-      <button onClick={updateStatus}>Approve</button>
+    <div className="bg-esp-gold flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      <Button text="Faça sua Análise Agora!" >
+        
+      </Button>
     </div>
   );
 }
