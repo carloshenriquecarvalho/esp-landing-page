@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import { Button } from "../ui/Button";
 import { sendGTMEvent } from "@next/third-parties/google";
@@ -17,55 +19,51 @@ export function HeroSection() {
     };
 
     return (
-            <section className="relative min-h-[80vh] w-full flex flex-col items-center overflow-hidden">
-                <picture
-                    className="absolute inset-0 z-0 w-full brightness-[0.6]">
+        <section className="relative min-h-[85vh] md:min-h-screen w-full flex flex-col items-center overflow-hidden bg-esp-darkblue">
+            <picture className="absolute inset-0 z-0 w-full h-full">
+                <source media="(min-width: 1024px)" srcSet="/banner-hero-desktop.png" />
+                <source media="(min-width: 768px)" srcSet="/banner-hero-desktop.png" />
+                <Image
+                    src="/banner-hero.png"
+                    alt="Fundo ESP"
+                    fill
+                    priority
+                    className="object-cover object-center w-full h-full brightness-[0.4] md:brightness-[0.4]"
+                    placeholder="empty"
+                />
+            </picture>
 
-                    {/* Se a tela for maior que 1024px */}
-                    <source media="(min-width: 1024px)" srcSet="/banner-hero-desktop.png" />
+            <div className="relative z-20 py-6 md:py-10">
+                <Image
+                    src="/logo.png"
+                    alt="Esp logo"
+                    priority
+                    width={100}
+                    height={80}
+                    className="md:w-[140px]"
+                />
+            </div>
 
-                    {/* Se a tela for maior que 768px */}
-                    <source media="(min-width: 768px)" srcSet="/banner-hero-desktop.png" />
-
-                    <Image
-                        src="/banner-hero.png"
-                        alt="Fundo ESP"
-                        fill
-                        priority
-                        className="absolute inset-0 z-0 object-cover object-center w-full h-full brightness-[0.6]"
-                        placeholder="empty">
-                    </Image>
-                </picture>
-
-
-                <div className="relative inset-0 z-10 py-3">
-                    <Image
-                        src="/logo.png"
-                        alt="Esp logo"
-                        priority
-                        width={80}
-                        height={60}
-                    >
-
-                    </Image>
-                </div>
-                <div className="relative z-10 flex flex-col p-6 flex-1 justify-end">
-                    <h1 className="text-4xl font-bold text-btn-gold leading-tight align-center text-center">
+            <div className="relative z-10 flex flex-col flex-1 items-center justify-end md:justify-center px-6 pb-16 md:pb-0 w-full max-w-5xl mx-auto">
+                <div className="flex flex-col items-center text-center">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-btn-gold leading-tight max-w-4xl">
                         {CONTENT.hero.title}
                     </h1>
-                    <p className="mt-6 text-text-primary text-center">
+                    
+                    <p className="mt-6 text-text-primary text-lg md:text-2xl max-w-2xl opacity-90">
                         {CONTENT.hero.description}
                     </p>
-                    <div className="mt-10 flex flex-col align-center">
+                    
+                    <div className="mt-10 w-full md:w-auto flex justify-center">
                         <Button
                             onClick={handleConversion}
                             id={CONTENT.gtm.id}
                             text={CONTENT.hero.ctaText}
-                        >
-                        </Button>
+                            className="w-full md:w-auto md:px-16 md:py-6 md:text-2xl shadow-2xl shadow-btn-gold/20"
+                        />
                     </div>
                 </div>
-
-            </section>
+            </div>
+        </section>
     );
 }

@@ -4,12 +4,10 @@ import { LeadForm } from "../ui/LeadForm";
 export function FormSection() {
   return (
     <section className="bg-esp-darkblue py-24 px-6 relative overflow-hidden">
-      {/* Detalhe de luz de fundo */}
       <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-btn-gold/5 rounded-full blur-3xl" />
       
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
         
-        {/* Lado Esquerdo: Texto de Venda */}
         <div className="lg:w-1/2 text-center lg:text-left">
           <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
             Pronto para <span className="text-btn-gold">limpar seu nome</span> de uma vez por todas?
@@ -28,7 +26,6 @@ export function FormSection() {
           </div>
         </div>
 
-        {/* Lado Direito: O Formulário */}
         <div className="lg:w-1/2 w-full">
           <LeadForm />
         </div>

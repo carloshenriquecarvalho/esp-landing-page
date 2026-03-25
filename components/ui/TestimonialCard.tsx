@@ -13,30 +13,24 @@ export function TestimonialCard({ name, text, city, time, likes }: TestimonialCa
   return (
     <div className="bg-white p-6 rounded-2xl shadow-xl flex items-start gap-5 hover:border-btn-gold transition-all duration-300">
       
-      {/* 1. BLOCO DO AVATAR (Esquerda) */}
       <div className="relative w-14 h-14 flex-shrink-0">
         <Image 
-          src="/logo.png" // Exporte o avatar do Figma ou use a logo ESP
+          src="/logo.png"
           alt={`Avatar ${name}`}
           fill
           className="rounded-full object-cover shadow-inner"
         />
       </div>
 
-      {/* 2. BLOCO DO CONTEÚDO (Direita) */}
       <div className="flex-1">
         
-        {/* Nome do Cliente */}
         <h4 className="text-black font-bold text-base md:text-lg mb-2">
           {name}
         </h4>
-        
-        {/* Depoimento em Preto/Cinza Claro */}
         <p className="text-gray-900 text-sm md:text-base leading-relaxed mb-4">
           {text}
         </p>
         
-        {/* FOOTER (O "Formatinho Social" que você queria) */}
         <div className="flex items-center gap-6 text-gray-600 text-xs md:text-sm">
           <span>{time}</span>
           <span className="font-bold">{likes} curtidas</span>

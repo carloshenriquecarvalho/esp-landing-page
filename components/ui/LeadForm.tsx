@@ -11,14 +11,12 @@ export function LeadForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // 1. DISPARO GTM (Evento de Lead)
     sendGTMEvent({ 
       event: 'generate_lead', 
       form_id: 'analise_credito_principal',
       debt_range: formData.debt 
     });
 
-    // 2. REDIRECIONAMENTO WHATSAPP (Com mensagem personalizada)
     const message = `Olá! Meu nome é ${formData.name}. Gostaria de uma análise para limpar meu nome. Minha dívida aproximada é de ${formData.debt}.`;
     const whatsappUrl = `https://wa.me/556192028214?text=${encodeURIComponent(message)}`;
     
@@ -59,7 +57,6 @@ export function LeadForm() {
         />
       </div>
 
-      {/* SELECT VALOR DA DÍVIDA (Qualifica o Lead pro Edgar) */}
       <div className="flex flex-col gap-2">
         <label className="text-xs font-bold uppercase text-gray-400 ml-2">Valor da Dívida</label>
         <select 

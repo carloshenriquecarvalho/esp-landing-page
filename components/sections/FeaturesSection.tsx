@@ -17,16 +17,15 @@ export function FeaturesSection() {
           </p>
         </div>
 
-        {/* O GRID: 1 coluna sempre (empilhado) */}
-        {/* Usei gap-10 para dar um respiro entre os cards como na imagem. */}
+
         <div className="grid grid-cols-1 gap-10">
           {CONTENT.features.map((item) => (
             <FeatureCard 
               key={item.id}
-              id={item.id} // Passando o ID para a lógica de cores/layout
+              id={item.id}
               title={item.title}
               description={item.description}
-              imgSrc={item.imgSrc} // Passando a prop da imagem
+              imgSrc={item.imgSrc}
             />
           ))}
         </div>
