@@ -35,8 +35,9 @@ export function LeadForm() {
 
       {/* INPUT NOME */}
       <div className="flex flex-col gap-2">
-        <label className="text-xs font-bold uppercase text-gray-400 ml-2">Nome Completo</label>
+        <label htmlFor='name' className="text-xs font-bold uppercase text-gray-400 ml-2">Nome Completo</label>
         <input 
+          id="name"
           required
           type="text"
           placeholder="Ex: Carlos Henrique"
@@ -47,8 +48,9 @@ export function LeadForm() {
 
       {/* INPUT WHATSAPP */}
       <div className="flex flex-col gap-2">
-        <label className="text-xs font-bold uppercase text-gray-400 ml-2">WhatsApp</label>
+        <label htmlFor='whatsapp' className="text-xs font-bold uppercase text-gray-400 ml-2">WhatsApp</label>
         <input 
+          id="whatsapp"
           required
           type="tel"
           placeholder="(61) 99999-9999"
@@ -58,8 +60,9 @@ export function LeadForm() {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label className="text-xs font-bold uppercase text-gray-400 ml-2">Valor da Dívida</label>
+        <label htmlFor="debt-select" className="text-xs font-bold uppercase text-gray-400 ml-2">Valor da Dívida</label>
         <select 
+          id="debt-select"
           required
           className="bg-gray-50 border border-gray-200 p-4 rounded-2xl text-black outline-none focus:border-btn-gold transition-all appearance-none cursor-pointer"
           onChange={(e) => setFormData({...formData, debt: e.target.value})}
