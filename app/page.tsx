@@ -23,7 +23,7 @@ export default function Home() {
     <main className="min-h-screen">
       <section className="relative min-h-[80vh] w-full flex flex-col items-center overflow-hidden">
         <picture
-        className="absolute inset-0 z-0 w-full brightness-[0.4]">
+        className="absolute inset-0 z-0 w-full brightness-[0.6]">
 
           {/* Se a tela for maior que 1024px */}
           <source media="(min-width: 1024px)" srcSet="/banner-hero-desktop.png" />
@@ -53,7 +53,7 @@ export default function Home() {
 
           </Image>
         </div>
-        <div className="relative z-10 pt-65">
+        <div className="relative z-10 flex flex-col p-6 flex-1 justify-end">
           <h1 className="text-4xl font-bold text-btn-gold leading-tight align-center text-center">
             {CONTENT.hero.title}
           </h1>
