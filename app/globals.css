@@ -10,6 +10,7 @@
 
 @theme inline {
   --color-foreground: var(--color-esp-blue);
+  --color-border-gold: var(--color-esp-gold);
   --color-background: var(--color-esp-darkblue);
   --color-btn-gold: var(--color-esp-gold);
   --color-dark-gold: var(--color-esp-dark-gold);
