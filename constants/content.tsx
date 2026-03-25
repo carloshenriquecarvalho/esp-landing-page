@@ -5,7 +5,7 @@ export const CONTENT = {
     hero: {
         title: "Limpe Seu Nome e Volte à Ativa Hoje!",
         description: "Regularize seu nome de forma rápida, segura e sem burocracia. Recupere seu crédito ainda hoje.",
-        ctaText: "Faça Sua Análise!",
+        ctaText: "Faça Sua Análise Agora!",
         whatsappLink: "https://wa.me/556192028214"
     },
     features: [
@@ -37,5 +37,55 @@ export const CONTENT = {
             variante: "default",
             imgSrc: "/mobile-feat-4.png"
         }
-    ]
+    ],
+    testimonials: [
+        { 
+          id: 1, 
+          name: "Marcos Silva", 
+          text: "Minha nota no Serasa subiu 300 pontos em 15 dias. Finalmente consegui financiar meu carro!", 
+          city: "Brasília - DF", 
+          time: "1h", 
+          likes: "12" 
+        },
+        { 
+          id: 2, 
+          name: "Ana Paula", 
+          text: "Achei que era impossível limpar meu nome sem pagar as dívidas abusivas. A ESP resolveu tudo.", 
+          city: "Goiânia - GO", 
+          time: "3h", 
+          likes: "25" 
+        },
+        { 
+          id: 3, 
+          name: "Ricardo Santos", 
+          text: "Atendimento nota 10. Honestos e diretos ao ponto. Recomendo para todo mundo que está travado.", 
+          city: "Taguatinga - DF", 
+          time: "1d", 
+          likes: "15" 
+        },
+        { 
+          id: 4, 
+          name: "Carla Souza", 
+          text: "Saí do vermelho e recuperei minha paz. O suporte pelo WhatsApp é excelente.", 
+          city: "Ceilândia - DF", 
+          time: "2h", 
+          likes: "31" 
+        },
+        { 
+          id: 5, 
+          name: "Felipe Melo", 
+          text: "Processo rápido e 100% legal. Em menos de um mês meu nome já estava limpo nos órgãos.", 
+          city: "São Paulo - SP", 
+          time: "1w", 
+          likes: "19" 
+        },
+        { 
+          id: 6, 
+          name: "Juliana Lima", 
+          text: "O investimento que se paga em uma semana. Voltei a ter crédito no mercado!", 
+          city: "Rio de Janeiro - RJ", 
+          time: "4h", 
+          likes: "28" 
+        }
+  ]
 };
