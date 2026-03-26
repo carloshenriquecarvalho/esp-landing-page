@@ -5,6 +5,8 @@ import { FeaturesSection } from "../components/sections/FeaturesSection";
 import { TestimonialsSection } from "../components/sections/TestimonialsSection";
 import { FormSection } from "../components/sections/FormSection";
 import { Footer } from "../components/sections/Footer"
+import { FAQSection } from "../components/sections/FAQSection";
+import { AuthoritySection } from "@/components/sections/AuthoritySection";
 
 export default function Home() {
 
@@ -15,6 +17,8 @@ export default function Home() {
       <FeaturesSection></FeaturesSection>
       <TestimonialsSection></TestimonialsSection>
       <FormSection></FormSection>
+      <FAQSection></FAQSection>
+      <AuthoritySection></AuthoritySection>
       <Footer></Footer>
     </main>
   );

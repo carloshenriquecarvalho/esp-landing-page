@@ -28,8 +28,8 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <GoogleTagManager gtmId="GTM-XXXXXXX"></GoogleTagManager>
       <body className="min-h-full flex flex-col">
-        <GoogleTagManager gtmId="GTM-XXXXXXX"></GoogleTagManager>
         {children}
         </body>
     </html>

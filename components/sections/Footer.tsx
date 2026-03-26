@@ -1,55 +1,77 @@
-
+// components/sections/Footer.tsx
 import Image from "next/image";
+import { CONTENT } from "../../constants/content";
 import Link from "next/link";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-esp-darkblue border-t border-white/10 pt-16 pb-8 px-6">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+    <footer className="bg-esp-darkblue border-t border-white/10 pt-20 pb-10 px-6 text-white">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
         
-        <div className="flex flex-col gap-6">
+        {/* COLUNA 1: AUTORIDADE (5 colunas) */}
+        <div className="md:col-span-5 flex flex-col gap-6">
           <Image 
             src="/logo.png" 
-            alt="ESP Logo" 
+            alt="ESP Soluções Logo" 
             width={120} 
-            height={80} 
-            className="brightness-110"
+            height={90} 
+            className="brightness-125"
           />
-          <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-            Especialistas em recuperação de crédito e limpeza de nome. Devolvendo o poder de compra e a dignidade para milhares de brasileiros.
+          <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+            A ESP Soluções Financeiras é referência em regularização de crédito e revisão técnica de apontamentos. Atuamos rigorosamente dentro das normas do Código de Defesa do Consumidor.
           </p>
-        </div>
-
-        <div className="flex flex-col gap-4">
-          <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-2">Navegação</h4>
-          <nav className="flex flex-col gap-3 text-gray-400 text-sm">
-            <Link href="#" className="hover:text-btn-gold transition-colors">Início</Link>
-            <Link href="#solucoes" className="hover:text-btn-gold transition-colors">Soluções</Link>
-            <Link href="#depoimentos" className="hover:text-btn-gold transition-colors">Depoimentos</Link>
-            <Link href="#contato" className="hover:text-btn-gold transition-colors">Análise Gratuita</Link>
-          </nav>
-        </div>
-
-        <div className="flex flex-col gap-4">
-          <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-2">Fale Conosco</h4>
-          <div className="text-gray-400 text-sm flex flex-col gap-3">
-            <p>📍 Taguatinga, Brasília - DF</p>
-            <p>📞 (61) 9202-8214</p>
-            <p>✉️ contato@espsolucoes.com.br</p>
+          {/* SELO DE SEGURANÇA (Opcional mas ajuda no RF09/06) */}
+          <div className="flex items-center gap-3">
+            <div className="px-3 py-1 border border-btn-gold/50 rounded-lg text-[10px] text-btn-gold font-bold uppercase">
+              🔒 LGPD Compliance
+            </div>
+            <div className="px-3 py-1 border border-white/20 rounded-lg text-[10px] text-gray-400 font-bold uppercase">
+              ⚖️ Suporte Jurídico
+            </div>
           </div>
-          <div className="flex gap-4 mt-2">
-            <Link href="https://www.instagram.com/servicos.esp/" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-btn-gold/20 transition-all">
-              <span className="text-white">IG</span>
-            </Link>
+        </div>
+
+        {/* COLUNA 2: LINKS (3 colunas) */}
+        <div className="md:col-span-3">
+          <h4 className="font-bold mb-6 text-btn-gold uppercase text-xs tracking-widest">Institucional</h4>
+        <ul className="flex flex-col gap-4 text-gray-400 text-sm">
+          <li><Link href="/quem-somos" className="hover:text-white transition-colors">Quem Somos</Link></li>
+          <li><Link href="/como-funciona" className="hover:text-white transition-colors">Como Funciona</Link></li>
+          <li><Link href="/termos" className="hover:text-white transition-colors">Termos de Uso</Link></li>
+          <li><Link href="/privacidade" className="hover:text-white transition-colors">Privacidade</Link></li>
+        </ul>
+        </div>
+
+        {/* COLUNA 3: CONTATO REAL (4 colunas) */}
+        <div className="md:col-span-4">
+          <h4 className="font-bold mb-6 text-btn-gold uppercase text-xs tracking-widest">Atendimento Oficial</h4>
+          <div className="flex flex-col gap-4 text-sm text-gray-300">
+            <p className="flex items-center gap-3">
+              <span className="text-btn-gold">📍</span> Taguatinga Shopping, Brasília - DF
+            </p>
+            <p className="flex items-center gap-3">
+              <span className="text-btn-gold">📞</span> (61) 9202-8214
+            </p>
+            <p className="flex items-center gap-3">
+              <span className="text-btn-gold">✉️</span> contato@espsolucoes.com.br
+            </p>
           </div>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] md:text-xs text-gray-500 uppercase tracking-widest">
-        <p>© {currentYear} ESP SOLUÇÕES FINANCEIRAS - TODOS OS DIREITOS RESERVADOS.</p>
-        <p className="hover:text-white transition-colors cursor-pointer">Desenvolvido por Nexus Tecnologia e Inovação</p>
+      {/* LINHA FINAL: DADOS DO CNPJ (RF06 PURÍSSIMO) */}
+      <div className="max-w-6xl mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] text-gray-500 font-mono">
+        <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
+          <span>ESP SOLUÇÕES FINANCEIRAS LTDA</span>
+          <span className="hidden md:block">|</span>
+          <span>CNPJ: 00.000.000/0001-00</span> {/* Peça o CNPJ real pro Edgar */}
+        </div>
+        <p>© {currentYear} — Todos os direitos reservados.</p>
+        <p className="hover:text-white transition-colors cursor-pointer">
+          BY NEXUS TECH & INNOVATION
+        </p>
       </div>
     </footer>
   );

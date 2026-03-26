@@ -19,7 +19,7 @@ export function FeatureCard({ id, title, description, imgSrc }: FeatureCardProps
   // Classes de texto
   const titleClasses = isHighlight ? "text-black" : "text-white";
   const descClasses = isHighlight ? "text-gray-700" : "text-gray-300";
-  const numberClasses = isHighlight ? "text-esp-darkblue/10" : "text-btn-gold";
+  const numberClasses = isHighlight ? "text-background/20" : "text-btn-gold";
 
   return (
     <div 
