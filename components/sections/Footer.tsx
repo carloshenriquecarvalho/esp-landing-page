@@ -27,6 +27,15 @@ export function Footer() {
             <div className="px-3 py-1 border border-btn-gold/50 rounded-lg text-[10px] text-btn-gold font-bold uppercase">
               🔒 LGPD Compliance
             </div>
+            <div className="mt-4">
+              <Image 
+                src="/google-safe.png" // Nome exato do seu arquivo na pasta public
+                alt="Google Safe Browsing"
+                width={150} 
+                height={50}
+                className="opacity-70 hover:opacity-100 transition-opacity"
+              />
+            </div>
             <div className="px-3 py-1 border border-white/20 rounded-lg text-[10px] text-gray-400 font-bold uppercase">
               ⚖️ Suporte Jurídico
             </div>
@@ -49,7 +58,7 @@ export function Footer() {
           <h4 className="font-bold mb-6 text-btn-gold uppercase text-xs tracking-widest">Atendimento Oficial</h4>
           <div className="flex flex-col gap-4 text-sm text-gray-300">
             <p className="flex items-center gap-3">
-              <span className="text-btn-gold">📍</span> Taguatinga Shopping, Brasília - DF
+              <span className="text-btn-gold">📍</span> Ceilândia, Brasília - DF
             </p>
             <p className="flex items-center gap-3">
               <span className="text-btn-gold">📞</span> (61) 9202-8214
@@ -66,7 +75,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
           <span>ESP SOLUÇÕES FINANCEIRAS LTDA</span>
           <span className="hidden md:block">|</span>
-          <span>CNPJ: 00.000.000/0001-00</span> {/* Peça o CNPJ real pro Edgar */}
+          <span>CNPJ: 32.900.231/0001-48</span>
         </div>
         <p>© {currentYear} — Todos os direitos reservados.</p>
         <p className="hover:text-white transition-colors cursor-pointer">

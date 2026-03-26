@@ -4,9 +4,10 @@ import { HeroSection } from "../components/sections/HeroSection";
 import { FeaturesSection } from "../components/sections/FeaturesSection";
 import { TestimonialsSection } from "../components/sections/TestimonialsSection";
 import { FormSection } from "../components/sections/FormSection";
-import { Footer } from "../components/sections/Footer"
+import { Footer } from "../components/sections/Footer";
 import { FAQSection } from "../components/sections/FAQSection";
-import { AuthoritySection } from "@/components/sections/AuthoritySection";
+import { AuthoritySection } from "../components/sections/AuthoritySection";
+import { ProcessSection } from "../components/sections/ProcessSecion";
 
 export default function Home() {
 
@@ -17,8 +18,9 @@ export default function Home() {
       <FeaturesSection></FeaturesSection>
       <TestimonialsSection></TestimonialsSection>
       <FormSection></FormSection>
-      <FAQSection></FAQSection>
+      <ProcessSection></ProcessSection>
       <AuthoritySection></AuthoritySection>
+      <FAQSection></FAQSection>
       <Footer></Footer>
     </main>
   );
