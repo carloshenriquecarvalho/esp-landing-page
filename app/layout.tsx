@@ -28,7 +28,7 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <GoogleTagManager gtmId="GTM-XXXXXXX"></GoogleTagManager>
+      <GoogleTagManager gtmId="GTM-WNGMPFJV"></GoogleTagManager>
       <GoogleAnalytics gaId="AW-18043821234" />
       <body className="min-h-full flex flex-col">
         {children}
