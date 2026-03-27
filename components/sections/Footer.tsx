@@ -75,7 +75,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
           <span>ESP SOLUÇÕES FINANCEIRAS LTDA</span>
           <span className="hidden md:block">|</span>
-          <span>CNPJ:   </span>
+          <span>CNPJ: 32.900.231/0001-48</span>
         </div>
         <p>© {currentYear} — Todos os direitos reservados.</p>
         <p className="hover:text-white transition-colors cursor-pointer">
