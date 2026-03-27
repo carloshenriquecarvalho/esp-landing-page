@@ -16,10 +16,10 @@ export default function Home() {
     <main className="min-h-screen">
       <HeroSection></HeroSection>
       <FeaturesSection></FeaturesSection>
-      <TestimonialsSection></TestimonialsSection>
+      {/* <TestimonialsSection></TestimonialsSection> */}
       <FormSection></FormSection>
       <ProcessSection></ProcessSection>
-      {/* <AuthoritySection></AuthoritySection> */}
+      <AuthoritySection></AuthoritySection>
       <FAQSection></FAQSection>
       <Footer></Footer>
     </main>
