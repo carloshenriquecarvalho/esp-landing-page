@@ -127,6 +127,7 @@ Quero minha análise gratuita!`;
       </div>
 
       <Button
+        type="submit"
         text="Quero minha análise gratuita agora"
         className="w-full mt-4 shadow-btn-gold/30 shadow-xl py-5"
       />

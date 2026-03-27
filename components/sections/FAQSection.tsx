@@ -6,7 +6,7 @@ export function FAQSection() {
   const [openId, setOpenId] = useState<number | null>(null);
 
   return (
-    <section className="bg-esp-darkblue py-24 px-6 text-white">
+    <section className="bg-esp-darkblue py-24 px-6 text-white" id='faq'>
       <div className="max-w-3xl mx-auto">
         
         <div className="text-center mb-16">
