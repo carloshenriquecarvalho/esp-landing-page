@@ -10,7 +10,7 @@ export function AuthoritySection() {
   ];
 
   return (
-    <section className="bg-background py-12 border-y border-background/80">
+    <section className="bg-background py-12 border-y border-btn-gold/80">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
