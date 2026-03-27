@@ -19,7 +19,7 @@ export default function Home() {
       <TestimonialsSection></TestimonialsSection>
       <FormSection></FormSection>
       <ProcessSection></ProcessSection>
-      <AuthoritySection></AuthoritySection>
+      {/* <AuthoritySection></AuthoritySection> */}
       <FAQSection></FAQSection>
       <Footer></Footer>
     </main>
